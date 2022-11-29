@@ -1,0 +1,20 @@
+*
+{
+    background-color: aqua;
+    color: blueviolet;
+}
+p
+{
+    font-size: 23px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1
+{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+div
+{
+    padding: 50px;
+}
