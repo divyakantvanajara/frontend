@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example of flex box</title>
+    <style>
+      .div1 {
+        height: 300px;
+        width: 300px;
+        background-color: aqua;
+        color: black;
+        font-size: 4rem;
+      }
+      .div2 {
+        height: 300px;
+        width: 300px;
+        background-color: blue;
+        color: darkgoldenrod;
+        font-size: 4rem;
+      }
+      .div3 {
+        height: 300px;
+        width: 300px;
+        background-color: chocolate;
+        color: red;
+        font-size: 4rem;
+      }
+      .maindiv {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .maindiv2 {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .maindiv3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      .div4 {
+        flex-grow: 1;
+        height: 300px;
+        width: 300px;
+        background-color: red;
+        color: white;
+        font-size: 4rem;
+      }
+      .div5 {
+        flex-grow: 2;
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+        color: white;
+        font-size: 4rem;
+      }
+      .maindiv4 {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .maindiv5 {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .maindiv6 {
+        display: flex;
+        justify-content: center;
+      }
+      .maindiv7 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .maindiv8 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .mymaindiv {
+        height: 800px;
+        display: flex;
+        background-color:blueviolet;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div align="center" class="maindiv">
+      <div class="div1">
+        <br />
+        <span class="mynumber">1</span>
+      </div>
+      <div class="div2">
+        <br />
+        <span class="mynumber">2</span>
+      </div>
+      <div class="div3">
+        <br />
+        <span class="mynumber">3</span>
+      </div>
+    </div>
+    <br />
+    <div align="center" class="maindiv2">
+      <div class="div1">
+        <br />
+        <span class="mynumber">4</span>
+      </div>
+      <div class="div2">
+        <br />
+        <span class="mynumber">5</span>
+      </div>
+      <div class="div3">
+        <br />
+        <span class="mynumber">6</span>
+      </div>
+    </div>
+    <br />
+    <div align="center" class="maindiv3">
+      <div class="div4">
+        <br />
+        <span class="mynumber">4</span>
+      </div>
+      <div class="div5">
+        <br />
+        <span class="mynumber">5</span>
+      </div>
+      <div class="div3">
+        <br />
+        <span class="mynumber">6</span>
+      </div>
+    </div>
+    <br />
+    <div align="center" class="maindiv4">
+      <div class="div1">
+        <br />
+        <span class="mynumber">1</span>
+      </div>
+      <div class="div2">
+        <br />
+        <span class="mynumber">2</span>
+      </div>
+      <div class="div3">
+        <br />
+        <span class="mynumber">3</span>
+      </div>
+    </div>
+    <br />
+    <div align="center" class="maindiv5">
+      <div class="div1">
+        <br />
+        <span class="mynumber">1</span>
+      </div>
+      <div class="div2">
+        <br />
+        <span class="mynumber">2</span>
+      </div>
+      <div class="div3">
+        <br />
+        <span class="mynumber">3</span>
+      </div>
+    </div>
+    <br />
+    <div align="center" class="maindiv6">
+      <div class="div1">
+        <br />
+        <span class="mynumber">1</span>
+      </div>
+      <div class="div2">
+        <br />
+        <span class="mynumber">2</span>
+      </div>
+      <div class="div3">
+        <br />
+        <span class="mynumber">3</span>
+      </div>
+    </div>
+    <br />
+    <div align="center" class="maindiv7">
+      <div class="div1">
+        <br />
+        <span class="mynumber">1</span>
+      </div>
+      <div class="div2">
+        <br />
+        <span class="mynumber">2</span>
+      </div>
+      <div class="div3">
+        <br />
+        <span class="mynumber">3</span>
+      </div>
+    </div>
+    <br />
+    <div class="mymaindiv"> 
+      <div align="center" class="maindiv8">
+        <div class="div1">
+          <br />
+          <span class="mynumber">1</span>
+        </div>
+        <div class="div2">
+          <br />
+          <span class="mynumber">2</span>
+        </div>
+        <div class="div3">
+          <br />
+          <span class="mynumber">3</span>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>
