@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example of Menu</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation</title>
     <style>
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          width: 200px;
-          background-color: aqua;
+        .navbar{
+            background-color:aquamarine;
+            border-radius: 30px;
+            
         }
-        
-
-        li a {
-          display: block;
-          color: #000;
-          padding: 8px 16px;
-          text-decoration: none;
+        .navbar ul{
+            overflow: auto;
         }
-        /* Change the link color on hover */
-        li a:hover {
-             background-color: #555;
+        .navbar li{
+            float:left;
+            list-style: none; 
+            margin: 13px 20px;
+            
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color:blueviolet;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
             color: white;
+            padding: 12px 75px;
         }
-      
+        .navbar input{
+            border: 2px solid blueviolet;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
     </style>
-  </head>
-  <body>
-    <ul >
-      <li><a href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  
-        
+</head>
 
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website">
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
 
-  </body>
 </html>
