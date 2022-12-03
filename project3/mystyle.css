@@ -1,0 +1,43 @@
+@media (min-width: 1281px) {
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  /* background-color: white; */
+}
+.mymenu {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: yellow;
+  color: red;
+  padding: 20px;
+}
+.menuitems {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: red;
+  box-shadow: red 0px 7px 29px 0px;
+}
+.menuimage,
+.myname {
+  display: inline;
+  width: 100px;
+}
