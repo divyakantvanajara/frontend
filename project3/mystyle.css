@@ -7,7 +7,7 @@
   .banner {
        height: 100%;
        width: 100%;
-       background-image: url('image/banner1.jpg');
+       background-image: url('image/bannerimg.jpg');
   }
   .abouttxt{
     margin-top: 120px;
@@ -40,7 +40,7 @@
   .banner {
     height: 100%;
        width: 100%;
-       background-image: url('image/banner1.jpg');
+       background-image: url('image/bannerimg.jpg');
   }
   .abouttxt{
     margin-top: 120px;
@@ -227,4 +227,46 @@ font-size: 2rem;
 color:white;
 background-color: #020202;
 text-align: center;
+}
+.staff
+{
+margin-top: 50px;
+}
+.staffcards
+{
+display: grid;
+grid-template-columns: auto auto auto auto ;
+}
+.staffcards>div
+{
+/* border: 2px solid black; */
+border-radius: 20px;
+height:530px;
+width:242px;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.staffcards>div:hover
+{
+/* border: 2px solid black; */
+background-color: aqua;
+}
+.card-text
+{
+text-align: left;
+padding: 10px;
+}
+.footer
+{
+margin-top: 100px;
+display: grid;
+grid-template-columns: auto auto  ;
+background-color: #495C83;
+}
+.address
+{
+margin-top: 60px;
+color:white;
+text-align:left;
+/* border: 2px solid black; */
+margin-left: -30px;
 }
