@@ -110,11 +110,11 @@
 
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="category.html" class="nav-link">Events</a>
+                                        <a href="events.html" class="nav-link">Events</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="schedulelist.html" class="nav-link">Schedules</a>
+                                        <a href="schedules.html" class="nav-link">Schedules</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -122,7 +122,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="eventdetails1.html" class="nav-link">Events Details</a>
+                                        <a href="events-details.html" class="nav-link">Events Details</a>
                                     </li>
                                 </ul>
                             </li>
@@ -315,237 +315,111 @@
     <div class="page-banner-area">
         <div class="container">
             <div class="page-banner-content">
-                <h2>Category</h2>
+                <h2>Contact</h2>
+
 
             </div>
         </div>
     </div>
     <!-- End Page Banner -->
 
-    <!-- Start Events Schedules Area -->
-    <div class="events-schedules-area pb-100 ">
-        <div class="container ">
-            <div class="section-title ">
-                <span>Event Schedules</span>
-                <h2>Upcoming Event Schedules</h2>
+
+
+    <!-- Start Contact Area -->
+    <div class="contact-area pb-100">
+        <div class="container">
+            <div class="section-title">
+                <span>Have Questions?</span>
+                <h2>Drop Us a Line</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco.</p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-events-schedules">
-                        <div class="events-image">
-                            <a href="eventdetails1.html"><img
-                                    src="themes/Event_managment//default/assets/images/events-schedules/events-1.jpg"
-                                    alt="image"></a>
-
-                            <div class="tag"><a href="category.html">Conference</a></div>
-                        </div>
-
-                        <div class="events-content">
-                            <span><i class='bx bx-calendar'></i> 08/03/2023</span>
-                            <h3>
-                                <a href="eventdetails1.html">IT and Computer Network 2023</a>
-                            </h3>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean llicin lorem quis bibendum auctor.
-                            </p>
-
-                            <div class="bottom-content">
-                                <div class="info">
-                                    <img src="themes/Event_managment//default/assets/images/events-schedules/image-1.jpg"
-                                        alt="image">
-                                    <h4>Tripp Mckay</h4>
-                                    <p>Historian</p>
+                <div class="col-lg-8 col-md-12">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="form-control" required
+                                            data-error="Please enter your name" placeholder="Your Name*">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
                                 </div>
 
-                                <div class="book-btn">
-                                    <a href="contact.ht" class="book-btn-one"><i class='bx bx-arrow-to-right'></i>
-                                        Book Now</a>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control" required
+                                            data-error="Please enter your email" placeholder="Your Email*">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="phone_number" id="phone_number" required
+                                            data-error="Please enter your number" class="form-control"
+                                            placeholder="Phone Number">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control"
+                                            required data-error="Please enter your subject" placeholder="Subject">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5"
+                                            required data-error="Write your message"
+                                            placeholder="Your Message"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn"><i class='bx bx-chevron-right'></i> Send
+                                        Message <span></span></button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-events-schedules">
-                        <div class="events-image">
-                            <a href="eventdetails1.html"><img
-                                    src="themes/Event_managment//default/assets/images/events-schedules/events-2.jpg"
-                                    alt="image"></a>
+                <div class="col-lg-4 col-md-12">
+                    <ul class="contact-address">
+                        <li>
+                            <i class='flaticon-envelope'></i>
+                            <h4>Let’s Call or Email</h4>
+                            <a
+                                href="https://templates.envytheme.com/cdn-cgi/l/email-protection#6c1c000302072c0b010d0500420f0301"><span
+                                    class="__cf_email__"
+                                    data-cfemail="eb9b87848580ab8c868a8287c5888486">[email&#160;protected]</span></a>
+                            <a href="tel:00129345678">+00 129 345 678</a>
+                        </li>
 
-                            <div class="tag"><a href="category.html">Conference</a></div>
-                        </div>
-
-                        <div class="events-content">
-                            <span><i class='bx bx-calendar'></i> 28/04/2023</span>
-                            <h3>
-                                <a href="eventdetails1.html">Weddings 2023</a>
-                            </h3>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean llicin lorem quis bibendum auctor.
-                            </p>
-
-                            <div class="bottom-content">
-                                <div class="info">
-                                    <img src="themes/Event_managment//default/assets/images/events-schedules/image-2.jpg"
-                                        alt="image">
-                                    <h4>Gabrielle Winn</h4>
-                                    <p>Art Critic</p>
-                                </div>
-
-                                <div class="book-btn">
-                                    <a href="category.html" class="book-btn-one"><i class='bx bx-arrow-to-right'></i>
-                                        Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <li>
+                            <i class='flaticon-customer'></i>
+                            <h4>Our Creative Team</h4>
+                            <a
+                                href="https://templates.envytheme.com/cdn-cgi/l/email-protection#e3938f8c8d88a3848e828a8fcd808c8e"><span
+                                    class="__cf_email__"
+                                    data-cfemail="9feff3f0f1f4dff8f2fef6f3b1fcf0f2">[email&#160;protected]</span></a>
+                            <a href="tel:00129345678">+00 129 345 678</a>
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-events-schedules">
-                        <div class="events-image">
-                            <a href="eventdetails1.html"><img
-                                    src="themes/Event_managment//default/assets/images/events-schedules/events-3.jpg"
-                                    alt="image"></a>
-
-                            <div class="tag"><a href="category.html">Conference</a></div>
-                        </div>
-
-                        <div class="events-content">
-                            <span><i class='bx bx-calendar'></i> 14/07/2023</span>
-                            <h3>
-                                <a href="eventdetails1.html">Birthday Parties</a>
-                            </h3>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean llicin lorem quis bibendum auctor.
-                            </p>
-
-                            <div class="bottom-content">
-                                <div class="info">
-                                    <img src="themes/Event_managment//default/assets/images/events-schedules/image-3.jpg"
-                                        alt="image">
-                                    <h4>Milana Myles</h4>
-                                    <p>Insurance consultant</p>
-                                </div>
-
-                                <div class="book-btn">
-                                    <a href="contact.html" class="book-btn-one"><i class='bx bx-arrow-to-right'></i>
-                                        Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-events-schedules">
-                        <div class="events-image">
-                            <a href="eventdetails1.html"><img src="themes/Event_managment//default/assets/images/events-schedules/events-4.jpg"
-                                    alt="image"></a>
-
-                            <div class="tag"><a href="category.html">Conference</a></div>
-                        </div>
-
-                        <div class="events-content">
-                            <span><i class='bx bx-calendar'></i> 08/03/2023</span>
-                            <h3>
-                                <a href="eventdetails1.html">National Music Awards 2023</a>
-                            </h3>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean llicin lorem quis bibendum auctor.
-                            </p>
-
-                            <div class="bottom-content">
-                                <div class="info">
-                                    <img src="themes/Event_managment//default/assets/images/events-schedules/image-4.jpg" alt="image">
-                                    <h4>Tripp Mckay</h4>
-                                    <p>Historian</p>
-                                </div>
-
-                                <div class="book-btn">
-                                    <a href="category.html" class="book-btn-one"><i class='bx bx-arrow-to-right'></i>
-                                        Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-events-schedules">
-                        <div class="events-image">
-                            <a href="eventdetails1.html"><img src="themes/Event_managment//default/assets/images/events-schedules/events-5.jpg"
-                                    alt="image"></a>
-
-                            <div class="tag"><a href="category.html">Conference</a></div>
-                        </div>
-
-                        <div class="events-content">
-                            <span><i class='bx bx-calendar'></i> 28/04/2023</span>
-                            <h3>
-                                <a href="eventdetails1.html">Product Launches</a>
-                            </h3>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean llicin lorem quis bibendum auctor.
-                            </p>
-
-                            <div class="bottom-content">
-                                <div class="info">
-                                    <img src="themes/Event_managment//default/assets/images/events-schedules/image-5.jpg" alt="image">
-                                    <h4>Gabrielle Winn</h4>
-                                    <p>Art Critic</p>
-                                </div>
-
-                                <div class="book-btn">
-                                    <a href="category.html" class="book-btn-one"><i class='bx bx-arrow-to-right'></i>
-                                        Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-events-schedules">
-                        <div class="events-image">
-                            <a href="eventdetails1.html"><img src="themes/Event_managment//default/assets/images/events-schedules/events-6.jpg"
-                                    alt="image"></a>
-
-                            <div class="tag"><a href="category.html">Conference</a></div>
-                        </div>
-
-                        <div class="events-content">
-                            <span><i class='bx bx-calendar'></i> 14/07/2023</span>
-                            <h3>
-                                <a href="eventdetails1.html">Recruiting Events </a>
-                            </h3>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean llicin lorem quis bibendum auctor.
-                            </p>
-
-                            <div class="bottom-content">
-                                <div class="info">
-                                    <img src="themes/Event_managment//default/assets/images/events-schedules/image-3.jpg" alt="image">
-                                    <h4>Milana Myles</h4>
-                                    <p>Insurance consultant</p>
-                                </div>
-
-                                <div class="book-btn">
-                                    <a href="category.html" class="book-btn-one"><i class='bx bx-arrow-to-right'></i>
-                                        Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="view-all-btn">
-                <a href="category.html" class="default-btn"><i class='bx bx-chevron-right'></i> View All
-                    Events<span></span></a>
             </div>
         </div>
     </div>
-    <!-- End Events Schedules Area -->
-
-
+    <!-- End Contact Area -->
 
     <!-- Start Overview Area -->
     <div class="overview-area ptb-100">
@@ -579,10 +453,8 @@
                     <div class="single-footer-widget">
                         <div class="widget-logo">
                             <a href="index.html">
-                                <img src="themes/Event_managment//default/assets/images/logo.png" class="black-logo"
-                                    alt="image">
-                                <img src="themes/Event_managment//default/assets/images/white-logo.png"
-                                    class="white-logo" alt="image">
+                                <img src="assets/images/logo.png" class="black-logo" alt="image">
+                                <img src="assets/images/white-logo.png" class="white-logo" alt="image">
                             </a>
                         </div>
                         <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis bibendum auctor
