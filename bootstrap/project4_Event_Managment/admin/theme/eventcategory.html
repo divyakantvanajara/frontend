@@ -110,11 +110,20 @@
 
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
-							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+						<a class="sidebar-link" href="eventcategory.html">
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Event Category</span>
 						</a>
 					</li>
-
+                    <li class="sidebar-item">
+						<a class="sidebar-link" href="eventdetail.html">
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Event Details</span>
+						</a>
+					</li>
+                    <li class="sidebar-item">
+						<a class="sidebar-link" href="order.html">
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Event Order</span>
+						</a>
+					</li>
 					
 
 					
@@ -182,16 +191,81 @@
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Blank Page</h1>
+					<h1 class="h3 mb-3">Event Category Managment</h1>
 
 					<div class="row">
 						<div class="col-12">
 							<div class="card">
 								<div class="card-header">
-									<h5 class="card-title mb-0">Empty card</h5>
+									<h5 class="card-title mb-0">Insert Event Category</h5>
 								</div>
 								<div class="card-body">
+                                    <form>
+										<div class="mb-3">
+											<label class="form-label">Enter Your Title</label>
+											<input type="text" class="form-control" placeholder="Title">
+										</div>
+										
+										<div class="mb-3">
+											<label class="form-label">Enter Your Description</label>
+											<textarea class="form-control" placeholder="Textarea" rows="1"></textarea>
+										</div>
+										<div class="mb-3">
+											<label class="form-label w-100">Enter Photos</label>
+											<input type="file">
+											
+										</div>
+										
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</form>
 								</div>
+							</div>
+
+                            <div class="card">
+								<div class="card-header">
+									<h5 class="card-title">View Category</h5>
+									<h6 class="card-subtitle text-muted">Using the most basic table markup, here’s how .table-based tables look in Bootstrap.
+									</h6>
+								</div>
+								<table class="table">
+									<thead>
+										<tr>
+											<th style="width:40%;">Title</th>
+											<th style="width:25%">Description</th>
+											<th class="d-none" style="width: 50px;%">Photos</th>
+											<th>Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>IT and Computer Network 2023</td>
+											<td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, repudiandae! Exercitationem, tenetur harum, mollitia veli</td>
+											<td class="d-none d-md-table-cell">
+                                                <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                                    <img src="img/avatars/events-1.jpg" class="avatar img-fluid rounded" alt="Charles Hall" />
+                                                </a>
+                                            </td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+										<tr>
+											<td>Weddings 2023s</td>
+											<td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, repudiandae! Exercitationem, tenetur harum, mollitia veli</td>
+											<td class="">
+                                                <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                                    <img src="img/avatars/events-2.jpg" class="avatar img-fluid rounded" alt="Charles Hall" />
+                                                </a>
+                                            </td>
+											<td class="table-action">
+												<a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+												<a href="#"><i class="align-middle" data-feather="trash"></i></a>
+											</td>
+										</tr>
+										
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>

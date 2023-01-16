@@ -110,8 +110,18 @@
 
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="pages-profile.html">
-							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+						<a class="sidebar-link" href="eventcategory.html">
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Event Category</span>
+						</a>
+					</li>
+                    <li class="sidebar-item">
+						<a class="sidebar-link" href="eventdetail.html">
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Event Details</span>
+						</a>
+					</li>
+                    <li class="sidebar-item">
+						<a class="sidebar-link" href="order.html">
+							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Event Order</span>
 						</a>
 					</li>
 
@@ -182,16 +192,81 @@
 			<main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Blank Page</h1>
+					<h1 class="h3 mb-3">Event Category Managment</h1>
 
 					<div class="row">
 						<div class="col-12">
-							<div class="card">
-								<div class="card-header">
-									<h5 class="card-title mb-0">Empty card</h5>
+							
+
+                            <div class="card">
+								<div class="card-header col-9">
+									<h5 class="card-title">Order Event Category</h5>
+									<h6 class="card-subtitle text-muted">Using the most basic table markup, here’s how .table-based tables look in Bootstrap.
+									</h6>
+                                    <div class="btn-group col-3">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Select one Value only
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">completed</a>
+                                            <a class="dropdown-item" href="#">Pending</a>
+                                            <a class="dropdown-item" href="#">Requested</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Rejected</a>
+                                        </div>
+                                    </div>
 								</div>
-								<div class="card-body">
-								</div>
+								<table class="table">
+									<thead>
+										<tr>
+											<th style="width:40%;">Title</th>
+											<th style="width:20%;">Customer</th>
+											<th style="width: 20px;">Organizer</th>
+											<th style="width: 20px;">Venue</th>
+											<th style="width: 20px;">Price</th>
+											<th class="d-none" style="width: 50px">Photos</th>
+											<th style="width:25%">Photos</th>
+											
+											
+											<th style="width:40%">Actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>IT and Computer Network 2023</td>
+											<td>Divyakant</td>
+											<td>IT Consultancy</td>
+											<td>Bhavnagar</td>
+											<td>5000</td>
+											
+											<td class="d-none d-md-table-cell">
+                                                <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                                    <img src="img/avatars/events-1.jpg" class="avatar img-fluid rounded" alt="Charles Hall" />
+                                                </a>
+                                            </td>
+											
+											<td class="table-action">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <button class="btn-success btn btn-sm">Accept</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button class="btn-danger btn btn-sm">Reject</button>
+                                                    </div>
+
+                                                </div>
+												
+                                                
+
+
+                                                
+										
+											
+										</tr>
+										
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>

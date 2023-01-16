@@ -1,0 +1,132 @@
+<!-- Develope Math Calculator which has 2 number input and it has 4 button  -->
+<!-- for addition, substraction, multiplication, division  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <h1> Calculator</h1>
+    </h1>
+    <form action="" method="post">
+        <table border="2" align="center" cellpadding="10">
+            <tr>
+                <td>
+                    Enter Value of number1
+                </td>
+                <td>
+                    <input type="number" id="number1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Value of number2
+                </td>
+                <td>
+                    <input type="number" id="number2">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Addition" id="btnAddition" onclick="CalculateAddition();">
+                    <input type="button" value="Substraction" id="btnSubstraction" onclick="CalculateSubstraction();">
+                    <input type="button" value="Multiplication" id="btnMultiplication" onclick="CalculateMultiplication();">
+                    <input type="button" value="Divison" id ="btnDivison" onclick="CalculateDivison();">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" id="output">
+                 <h2>here result will be displayed</h2>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var btnAddition=document.getElementById("btnAddition");
+        var btnSubstraction=document.getElementById("btnSubstraction");
+        var btnMultiplication=document.getElementById("btnMultiplication");
+        var btnDivison=document.getElementById("btnDivison");
+        var number1=document.getElementById("number1");
+        var number2=document.getElementById("number2");
+        var output=document.getElementById("output");
+        console.log('all variables are created');
+
+         //function function-name()
+         function CalculateAddition()
+         {
+            if(number1.value=="")
+            {
+                alert("number1 can not be blank & must be number");
+            }
+            else if(number2.value=="")
+            {
+                alert("number2 can not be blank & must be number");
+            }
+            else
+            {
+                var result=parseInt(number1.value) + parseInt(number2.value);
+                output.innerHTML=result;
+            }
+         }
+
+         function CalculateSubstraction()
+         {
+            if(number1.value=="")
+            {
+                alert("number1 can not be blank & must be number");
+            }
+            else if(number2.value=="")
+            {
+                alert("number2 can not be blank & must be number");
+            }
+            else
+            {
+                var result=parseInt(number1.value) - parseInt(number2.value);
+                output.innerHTML=result;
+            }
+         }
+
+         function CalculateMultiplication()
+         {
+            if(number1.value=="")
+            {
+                alert("number1 can not be blank & must be number");
+            }
+            else if(number2.value=="")
+            {
+                alert("number2 can not be blank & must be number");
+            }
+            else
+            {
+                var result=parseInt(number1.value) * parseInt(number2.value);
+                output.innerHTML=result;
+            }
+         }
+         function CalculateDivison()
+         {
+            if(number1.value=="")
+            {
+                alert("number1 can not be blank & must be number");
+            }
+            else if(number2.value=="")
+            {
+                alert("number2 can not be blank & must be number");
+            }
+            else
+            {
+                var result=parseInt(number1.value) / parseInt(number2.value);
+                output.innerHTML=result;
+            }
+         }
+
+
+    </script>
+</body>
+
+</html>
