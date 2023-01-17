@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Area Calculator</h1>
+    <form action="" method="post">
+        <table border="2" align="center" cellpadding="10">
+            <tr>
+                <td>Enter length</td>
+                <td>
+                    <input type="number" id="length">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter width</td>
+                <td>
+                    <input type="number" id="width">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="button" id="btncalculate" value="Calculate" onclick="CalculateArea();">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" id="output">
+                    <h2>here result will be displayed</h2>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="myscript.js"></script>
+    <script>
+        var btncalculate = $("btncalculate");
+        var length = $("length");
+        var width = $("width");
+        var output = $("output");
+        log('all variables are created');
+        //function function-name()
+        var isValidInput = function()
+        {
+            if(length.value=="")
+            {
+                alert("length can not be blank & must be number");
+                return false;
+            }
+            else if(width.value=="")
+            {
+                alert("width can not be blank & must be number");
+                return false;
+            }
+            else 
+                return true;
+        }
+        var getArea = function()
+        {
+            //area is local variable
+            let area = parseInt(length.value) * parseInt(width.value);
+            console.log(area);
+            return area;
+        }
+        var CalculateArea = function()
+        {
+            //alert("hi");
+            var isValid = isValidInput();
+            if(isValid==true)
+            {
+                //area is local variable
+                let area = getArea();
+                output.innerHTML = area;
+            }
+            
+           
+        }
+    </script>
+</body>
+</html>
