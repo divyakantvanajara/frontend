@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error
+        {
+            background-color: rgb(255, 240, 242);
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interest Calculator</h1>
+    <form action="success.html" method="post" onsubmit="return ValidateForm();">
+        <table border="2" align="center" cellpadding="10">
+            <tr> 
+                <td>Enter amount</td>
+                <td>
+                    <input type="number" id="amount"  onblur="CheckInput(this.id);">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter rate</td>
+                <td>
+                    <input type="number" id="rate" onblur="CheckInput(this.id);">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter year</td>
+                <td>
+                    <input type="number" id="year" onblur="CheckInput(this.id);">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Calculate Interest">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function CheckInput(id)
+        {
+            if(document.getElementById(id).value!='')
+            {
+                document.getElementById(id).className='';
+            }
+            else 
+            {
+                document.getElementById(id).className='error';
+            }
+        }
+        function ValidateForm()
+        {
+            var amount= document.getElementById('amount');
+            var rate= document.getElementById('rate');
+            var year= document.getElementById('year');
+
+            if(amount.value=="")
+            {
+                alert('amount can not be blank');
+                amount.focus(); //set focus in amount 
+                amount.className = "error";
+                return false;
+            }
+            else if(rate.value=='')
+            {
+                alert('rate can not be blank');
+                rate.focus();
+                rate.className = "error";
+                return false;
+            }
+            else if(year.value=='')
+            {
+                alert('year can not be blank');
+                year.focus();
+                year.className = "error";
+                return false;
+            }
+            else 
+            {
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
