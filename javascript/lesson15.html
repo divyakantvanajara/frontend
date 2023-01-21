@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            background-color: rgb(255, 240, 242);
+            border: 2px solid red;
+            font-size: 18px;
+        }
+
+        .no-error {
+            background-color: white;
+            border: 1px solid black;
+            font-size: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Register with us</h1>
+    <form action="success.html" method="post" X>
+        <table border="2" align="center" cellpadding="10" width="70%">
+            <tr>
+                <td>Enter name</td>
+                <td>
+                    <input type="text" id="username" class="myinput">
+                </td>
+                <td width="33%" id="td-username" class="no-error">
+                    username can not be blank
+                </td>
+            </tr>
+            <tr>
+                <td>Enter pincode</td>
+                <td>
+                    <input type="number" id="pincode" class="myinput">
+                </td>
+                <td id="td-pincode" class="no-error">
+                    pincode can not be blank
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter birthdate</td>
+                <td>
+                    <input type="date" id="dob" class="myinput">
+                </td>
+                <td id="td-dob" class="no-error">
+                    date of birth can not be blank
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+        function isString(s)
+        {
+            return /^[a-zA-Z]+$/.test(s);
+        }
+        function CheckInput() {
+            var ErrorTd = "td-" + document.getElementById(this.id).id;
+            var InputType = document.getElementById(this.id).type;
+            var InputValue = document.getElementById(this.id).value;
+            
+            if (InputValue != '') {
+                document.getElementById(ErrorTd).className = 'no-error';
+            }
+            else {
+                document.getElementById(ErrorTd).className = 'error';
+            }
+
+            if (InputType == "text" &&  !isString(InputValue)) 
+            {
+                alert("only letters allowed");
+            }
+
+            else if(InputType=="number" && !isNumeric(InputValue))
+            {
+                alert("only digits allowed");
+            }
+        }
+
+        var inputs = document.getElementsByClassName("myinput");
+        for (let index = 0; index < inputs.length; index++) {
+            inputs[index].onblur = CheckInput;
+        }
+
+    </script>
+</body>
+
+</html>
