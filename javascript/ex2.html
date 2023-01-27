@@ -1,88 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .error {
-            background-color: aqua;
-            border: 2px solid yellow;
-        }
-    </style>
 </head>
-
 <body>
-    <h1> Interest Caculator</h1>
-    <form action="success.html" method="post" onsubmit="return ValidateForm();">
-        <table align="center" border="2" cellpadding="10">
-            <tr>
-                <td>Enter Value of amount</td>
-                <td>
-                    <input type="number" id="amount"onblur="CheckInput(this.id);">
-                </td>
-
-            </tr>
-            <tr>
-                <td>Enter value of rate</td>
-                <td><input type="number" id="rate" onblur="CheckInput(this.id);"></td>
-
-            </tr>
-            <tr>
-                <td>Enter value of year</td>
-                <td><input type="number" id="year"onblur="CheckInput(this.id);"></td>
-
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Calculate Interest">
-                </td>
-            </tr>
-        </table>
-    </form>
+    <h1>4th method to create object</h1>
     <script>
-        function CheckInput(id)
+        class Movie
         {
-            if(document.getElementById(id).value!='')
+            constructor(name,starcast,budget)
             {
-                document.getElementById(id).className='';
+                this.name=name;
+                this.starcast=starcast;
+                this.budget=budget;
             }
-            else 
+            display()
             {
-                document.getElementById(id).className='error';
+                console.log("name",this.name);
+                console.log("starcast",this.starcast);
+                console.log("budget",this.budget);
             }
+           
         }
-
-        function ValidateForm() {
-            var amount = document.getElementById('amount');
-            var rate = document.getElementById('rate');
-            var year = document.getElementById('year');
-
-            if (amount.value == "") {
-                alert('amount can not be blank');
-                amount.focus();
-                amount.className = "error";
-            return false;
-            }
-            else if (rate.value == "") {
-                alert('rate can not be blank ');
-                rate.focus();
-                amount.className = "error";
-                return false;
-            }
-            else if (year.value == "") {
-                alert('year can not be blank');
-                year.focus();
-                amount.className = "error";
-                return false;
-            }
-            else {
-                return true;
-            }
-        }
+        var m1=new Movie("pathan","Sharukhan",500);
+        m1.display();
+        var m2=new Movie("freedy","kartik aryan",100);
+        m2.display();
     </script>
 </body>
-
 </html>

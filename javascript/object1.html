@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1st method to create object</h1> <hr>
+    <b>use console to check output</b>
+    <script>
+        var person ={
+            //properities or instance variables
+            name: "Ankit Patel",
+            age : 37,
+            gender : true,
+            weight : 75.25
+        };
+        console.log('displaying person',person);
+        //accessing properties
+        console.log("name",person.name);
+        console.log("age",person.age);
+        console.log("gender",person.gender);
+        console.log("weight",person.weight);
+        //change value of properties
+        person.age = 38;
+        person.email = 'Ankit3385@gmail.com';
+        person["country"] = 'india';
+        console.log('second technique');
+        console.log("name",person['name']);
+        console.log("age",person['age']);
+        console.log("gender",person['gender']);
+        console.log("weight",person['weight']);
+        console.log("email",person['email']);
+        console.log("country",person["country"]);
+    </script>
+</body>
+</html>

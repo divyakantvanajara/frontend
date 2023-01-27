@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3rd method to create object</h1> <hr>
+    <b>use console to check output</b>
+    <script>
+        //create class using function
+        function Product(name,price,quantity)
+        {
+            this.name = name,
+            this.price = price,
+            this.quantity = quantity,
+            this.display = function()
+            {
+                console.log('Name',this.name);
+                console.log('price',this.price);
+                console.log('quantity',this.quantity);
+            }
+        }
+        
+        var p1 = new Product('I Phone',125000,10);
+        p1.display();
+
+        var p2 = new Product('Macbook pro',185000,2);
+        p2.display();
+
+    </script>
+</body>
+</html>

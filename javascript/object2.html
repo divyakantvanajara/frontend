@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2nd method to create object</h1> <hr>
+    <b>use console to check output</b>
+    <script>
+        var mymath = new Object({
+            num1 : 0,
+            num2: 0,
+            add : function()
+            {
+                 var temp = this.num1 + this.num2; //temp is local variable
+                 return temp;
+            },
+            sub : function()
+            {
+                var temp = this.num1 - this.num2;
+                return temp;
+            },
+            mul : function()
+            {
+                var temp = this.num1 * this.num2;
+                return temp;
+            },
+            div : function()
+            {
+                var temp = this.num1 / this.num2;
+                return temp;
+            }
+        });
+        var number1 = parseInt(prompt("Enter first number",1));
+        var number2 = parseInt(prompt("Enter second number",1));
+
+        var m1 = mymath;
+        m1.num1 = number1;
+        m1.num2 = number2;
+        console.log('addition',m1.add());
+        console.log('substraction',m1.sub());
+        console.log('multiplication',m1.mul());
+        console.log('division',m1.div());
+    </script>
+</body>
+</html>
