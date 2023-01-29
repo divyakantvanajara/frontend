@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Single level inheritance</h1> <hr>
+    <b>use console to check output</b>
+    <script>
+        class Person 
+        {
+            walk()
+            {
+                console.log('I can walk');
+            }
+            talk()
+            {
+                console.log('I can talk');
+            }
+        }
+        class Student extends Person
+        {
+            read()
+            {
+                console.log('I can read');
+            }
+            write()
+            {
+                console.log('i can write');
+            }
+        }
+        //var object = new class()
+        var p1 = new Person();
+        
+        p1.walk();
+        p1.talk();
+
+        var s1 = new Student();
+        s1.read();
+        s1.write();
+        s1.walk();
+        s1.talk();
+    </script>
+</body>
+</html>
