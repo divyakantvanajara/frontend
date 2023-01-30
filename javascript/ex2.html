@@ -9,45 +9,41 @@
 <body>
     <h1>Single level inheritance</h1> <hr>
     <b>use console to check output</b>
-
     <script>
-
         class KB
         {
             constructor(bytes)
             {
-                this.bytes=parseInt(bytes);
+                this.bytes = parseInt(bytes);
                 console.log("KB constructor call");
-
             }
             getKB()
             {
                 return this.bytes/1024;
-
             }
         }
+
         class MB extends KB
         {
             constructor(bytes)
             {
                 super(bytes);
-                console.log("MB constructor call");
+                console.log("Mb constructor calll");
             }
             getMB()
             {
-                return super.getKB()/1024;
+                return super.getKB() / 1024;
             }
         }
-        var bytes=prompt("Enter bytes",0);
-        var m1=new KB(bytes);
+        var bytes = prompt("Enter bytes",0);
+        var v1 = new KB(bytes);
+        var result= v1.getKB();
 
-        var result=m1.getKB();
-        console.log("Killo Bytes",result);
+         console.log("Kilo bytes",result);
 
-        var s1 = new MB(bytes);
-        var result=s1.getMB();
-        console.log("Mega Bytes",result);
-
+         var k1 = new MB(bytes);
+         var result = k1.getMB();
+         console.log("Mega bytes",result);
     </script>
 </body>
 </html>
