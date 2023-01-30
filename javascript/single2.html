@@ -31,10 +31,12 @@
             }
             getMB()
             {
-                return super.getKB() / 1024;
+                return (super.getKB() / 1024).toFixed(2);
             }
         }
+
         var bytes = prompt("Enter bytes",0);
+        //var object = new classname()
         var k1 = new KB(bytes);
         
         var result = k1.getKB();
