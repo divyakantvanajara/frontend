@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Single level inheritance</h1> <hr>
+    <b>use console to check output</b>
+    <script>
+        class KB 
+        {
+            constructor(bytes)
+            {
+                this.bytes = parseInt(bytes);
+                console.log('KB class constructor called....');
+            }
+            getKB()
+            {
+                return this.bytes/1024;
+            }
+        }
+        class MB extends KB
+        {
+            constructor(bytes)
+            {
+                super(bytes); //calling parent class constructor (compulsory)
+                console.log('MB class constructor called....');
+            }
+            getMB()
+            {
+                return (super.getKB() / 1024).toFixed(2);
+            }
+        }
+        class GB extends MB 
+        {
+            constructor(bytes)
+            {
+                super(bytes);
+                console.log('GB class constructor called....');
+            }
+            getGB()
+            {
+                return (super.getMB() / 1024).toFixed(2);
+            }
+        }
+        var bytes = prompt("Enter bytes",0);
+        //var object = new classname()
+        var g1 = new GB(bytes);
+        var result = g1.getGB();
+        console.log('giga bytes', result);
+    </script>
+</body>
+</html>

@@ -1,9 +1,13 @@
-<!-- create example of single level inhertiance  
+<!-- create example of multi-level inhertiance 
+
     create class foot which has construstor for inches 
     and method getFoot() which return foot 
 
     create class meter which extends foot class 
-    and method getMeter() which return Meter   -->
+    and method getMeter() which return Meter  
+
+     create class KM which extends meter class 
+    and method getKM() which return km -->
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -42,15 +46,23 @@
                 return(super.getFoot()/3.281).toFixed(2);
             }
         }
-        var inches= prompt("Enter the inches",0);
+        class KM extends Meter
+        {
+            constructor(inches)
+            {
+                super(inches);
+                console.log("KM constructor call");
 
-        var s1 = new Foot(inches);
-        var result=s1.getFoot();
-        console.log("foot for",result);
-
-        var d1=new Meter(inches);
-        var result=d1.getMeter();
-        console.log("Meter for",result);
+            }
+            getKM()
+            {
+                return (super.getMeter()/1000).toFixed(2);
+            }
+        }
+        var inches = prompt("Enter the inches");
+        var p1 = new KM(inches);
+        var result= p1.getKM();
+        console.log("KM is",result);
     </script>
     </body>
     </html>

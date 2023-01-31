@@ -1,0 +1,20 @@
+Develop Math Calculator which has 2 number input and it has 4 button 
+    for addition, substraction, multiplication, division 
+
+create example of single level inhertiance 
+    create class foot which has construstor for inches 
+    and method getFoot() which return foot 
+
+    create class meter which extends foot class 
+    and method getMeter() which return Meter  
+
+create example of multi-level inhertiance 
+
+    create class foot which has construstor for inches 
+    and method getFoot() which return foot 
+
+    create class meter which extends foot class 
+    and method getMeter() which return Meter  
+
+     create class KM which extends meter class 
+    and method getKM() which return km
