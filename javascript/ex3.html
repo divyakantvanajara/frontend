@@ -25,7 +25,7 @@
         {
             constructor(inches)
             {
-                this.inches=inches;
+                this.inches=parseInt(inches);
                 console.log("foot constructor call");
             }
             getFoot()
@@ -59,7 +59,7 @@
                 return (super.getMeter()/1000).toFixed(2);
             }
         }
-        var inches = prompt("Enter the inches");
+        var inches = prompt("Enter the inches",0);
         var p1 = new KM(inches);
         var result= p1.getKM();
         console.log("KM is",result);
