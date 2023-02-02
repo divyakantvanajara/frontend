@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>empty object</h1>
+    <hr>
+    <script>
+        //create empty object
+        var course = {}; //empty object
+        var exam = new Object();  //empty object
+        console.log(course);
+        console.log(exam);
+        course.name  = "React JS";
+        course.duration  = 150;
+        console.log(course);
+
+        //check whether property(instance variable) exists or not 
+        if(course.name === undefined)
+            console.log('course has no name property');
+        else
+            console.log(course.name);
+
+        if("fees" in course)
+            console.log(course.fees);
+        else 
+            console.log('course has no fees property');
+    </script>
+</body>
+</html>

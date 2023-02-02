@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hierarchical inheritance</h1> <hr>
+    <b>use console to see output</b>
+    <script>
+        class Log 
+        {
+            log(message)
+            {
+                console.log(message);
+            }
+            error(message)
+            {
+                console.error(message);
+            }
+            info(message)
+            {
+                console.info(message);
+            }
+        }
+        class Triangle extends Log
+        {
+            constructor(base,height)
+            {
+                super();
+                this.base = base;
+                this.height = height;
+                super.log('Triangle class constructor called');
+            }
+            getArea()
+            {
+                var area; //local variable 
+                area = this.base * this.height * 0.5;
+                return area;
+            }
+
+        }
+        class Circle extends Log
+        {
+            constructor(radius)
+            {
+                super();
+                this.radius = radius;
+                super.log('circle class constructor called....');
+            }
+            getArea()
+            {
+                var area = 3.14 * this.radius* this.radius;
+                return area;
+            }
+        }
+        class Cycliender extends Circle
+        {
+            constructor(radius,height)
+            {
+                super(radius);
+                this.height = height; 
+                super.log('Cycliender class constructor called....');
+            }
+            //method overidding
+            getArea()
+            {
+                var area = (2 * 3.14 * this.radius * this.height) + (2 * super.getArea());
+                return area;
+            }
+        }
+        //create object
+        var height = 100;
+        var radius = 50
+        var c1 = new Cycliender(radius,height);
+        c1.log(c1.getArea());
+    </script>
+</body>
+</html>
