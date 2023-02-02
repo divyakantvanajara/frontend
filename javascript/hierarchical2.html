@@ -9,63 +9,62 @@
 <body>
     <h1>Hierarchical inheritance</h1> <hr>
     <b>use console to see output</b>
-<script>
+    <script>
+        class Log 
+        {
+            log(message)
+            {
+                console.log(message);
+            }
+            error(message)
+            {
+                console.error(message);
+            }
+            info(message)
+            {
+                console.info(message);
+            }
+        }
+        class Triangle extends Log
+        {
+            constructor(base,height)
+            {
+                super();
+                this.base = base;
+                this.height = height;
+                super.log('Triangle class constructor called');
+            }
+            getArea()
+            {
+                var area; //local variable 
+                area = this.base * this.height * 0.5;
+                return area;
+            }
 
-    class Log
-    {
-        log(message)
-        {
-            console.log(message);
         }
-        error(message)
+        class Circle extends Log
         {
-            console.log(message);
+            constructor(radius)
+            {
+                super();
+                this.radius = radius;
+                super.log('circle class constructor called....');
+            }
+            getArea()
+            {
+                var area = 3.14 * this.radius* this.radius;
+                return area;
+            }
         }
-        info(message)
-        {
-            console.log(message);
-        }
-    }
-    class Triangle extends Log
-    {
-        constructor(base,height)
-        {
-            super();
-            this.base=base;
-            this.height=height;
-            super.log("Triangle Constructor call..");
+        //create object
+        var base = 10;
+        var height = 100;
+        var triangle = new Triangle(base,height);
+        var result = triangle.getArea();
+        triangle.log(result);
 
-        }
-        getArea()
-        {
-            var area;  // local variable
-            area=this.base * this.height * 0.5;
-            return area;
-        }
-    }
-    class Circle extends Log
-    {
-        constructor(radius)
-        {
-            super();
-            this.radius = radius;
-            super.log("Circle constructor call..");
-        }
-        getArea()
-        {
-            var area=3.14 * this.radius *this.radius;
-            return area;
-        }
-    }
-    var base=10;
-    var height=100;
-    var triangle=new Triangle(base,height);
-
-    var result=triangle.getArea();
-    triangle.log(result);
-
-    let circle =new Circle(100);
-    circle.log(circle.getArea());
-</script>
+        let circle = new Circle(100);
+        circle.log(circle.getArea());
+    </script>
 </body>
 </html>
