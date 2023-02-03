@@ -7,64 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hierarchical inheritance</h1> <hr>
-    <b>use console to see output</b>
     <script>
-        class Log 
-        {
-            log(message)
-            {
-                console.log(message);
-            }
-            error(message)
-            {
-                console.error(message);
-            }
-            info(message)
-            {
-                console.info(message);
-            }
-        }
-        class Triangle extends Log
-        {
-            constructor(base,height)
-            {
-                super();
-                this.base = base;
-                this.height = height;
-                super.log('Triangle class constructor called');
-            }
-            getArea()
-            {
-                var area; //local variable 
-                area = this.base * this.height * 0.5;
-                return area;
-            }
+        var course ={};
+        var exam = new Object();
+        console.log(course);
+        console.log(exam);
+        course.name="react js";
+        course.duration =100;
+        console.log(course);
 
-        }
-        class Circle extends Log
-        {
-            constructor(radius)
-            {
-                super();
-                this.radius = radius;
-                super.log('circle class constructor called....');
-            }
-            getArea()
-            {
-                var area = 3.14 * this.radius* this.radius;
-                return area;
-            }
-        }
-        //create object
-        var base = 10;
-        var height = 100;
-        var triangle = new Triangle(base,height);
-        var result = triangle.getArea();
-        triangle.log(result);
+        //check whether property(instance variable) exists or not 
+        if(course.name === undefined)
+            console.log('course has no name property');
+        else
+            console.log(course.name);
 
-        let circle = new Circle(100);
-        circle.log(circle.getArea());
+        if("fees" in course)
+            console.log(course.fees);
+        else 
+            console.log('course has no fees property');
     </script>
 </body>
 </html>

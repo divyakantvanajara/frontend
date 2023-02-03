@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow functions</h1>
+    <p id="output" style="margin-left:50px;font-size:30px;"></p>
+    <script>
+        let add = (num1,num2) => num1 + num2;
+        let sub = (num1,num2) => num1 - num2;
+        let mul = (num1,num2) => num1 * num2;
+        let div = (num1,num2) => num1 / num2;
+        let display = message => document.getElementById('output').innerHTML += '<br/> ' + message;
+        //{} braces
+        // () parenthesis
+        // [] brackets
+        // <> angular brackets
+        display('addition = ' + add(10,20));
+        display('substraction = ' + sub(10,3));
+        display('multiplication = ' + mul(10,3).toFixed(2));
+        display('division = ' + div(10,3).toFixed(2));
+    </script>
+</body>
+</html>

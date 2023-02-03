@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functional binding concept</h1>
+    <p id="output" style="margin-left:50px;font-size:30px;"></p>
+    <script>
+        let calculator = {
+            num1:10,
+            num2:3,
+            add:function(){
+                console.log(this.num1,this.num2);
+                let result = this.num1 + this.num2;
+                document.getElementById("output").innerHTML = 'addition = ' + result;
+            },
+            sub:function()
+            {
+                console.log(this.num1,this.num2);
+                let result = this.num1 - this.num2;
+                document.getElementById("output").innerHTML += "<br/>substraction = " + result;
+            }
+        }
+        calculator.add();
+        calculator.sub();
+
+        let addition = calculator.add.bind(calculator);
+        let substraction = calculator.sub.bind(calculator);
+        
+        addition();
+        substraction();
+    </script>
+</body>
+</html>
