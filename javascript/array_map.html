@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Map function</h1>
+    <p>use console to see output</p>
+    <script>
+        let countries = ['India','Russia','Canada','Brazil','US'];
+        console.log(countries);
+        let all_countries = countries.map(function(country){
+            return country.toUpperCase();
+        });
+        console.log(all_countries);
+
+        let books = [
+            {'name':'One','price':100,'author':'ABC'},
+            {'name':'Two','price':200,'author':'XYZ'},
+            {'name':'Three','price':300,'author':'ABC'}
+        ]
+        let filtered_books = books.map(function(book){
+            if(book.author=='ABC')
+                return book;
+        });
+        // If you need to remove ALL empty values ("", null, undefined and 0): 
+        filtered_books = filtered_books.filter(function(book)
+        {   
+            return book
+        }); 
+        console.log(filtered_books);
+    </script>
+</body>
+</html>

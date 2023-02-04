@@ -7,25 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Arrow functions</h1>
+    <p id="output" style="margin-left:50px;font-size:30px;"></p>
     <script>
-        var course ={};
-        var exam = new Object();
-        console.log(course);
-        console.log(exam);
-        course.name="react js";
-        course.duration =100;
-        console.log(course);
+        let add =(num1,num2) =>num1 + num2;
+        let sub =(num1,num2) =>num1 - num2;
+        let mul =(num1,num2) =>num1 * num2;
+        let div =(num1,num2) =>num1 / num2;
+        let display=message =>document.getElementById("output").innerHTML +='<br/>' + message;
 
-        //check whether property(instance variable) exists or not 
-        if(course.name === undefined)
-            console.log('course has no name property');
-        else
-            console.log(course.name);
-
-        if("fees" in course)
-            console.log(course.fees);
-        else 
-            console.log('course has no fees property');
+        display('addition = ' + add(10,3));
+        display('substraction = ' + sub(10,3));
+        display('multiplication = ' + mul(10,3));
+        display('divison = ' + div(10,3).toFixed(2));
     </script>
 </body>
 </html>

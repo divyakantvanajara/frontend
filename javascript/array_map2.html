@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #shop 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #shop>div 
+        {
+            width: 30%;
+            border: 1px solid black;
+            background-color: aliceblue;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Map function</h1>
+    <p>use console to see output</p>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="bookprice" placeholder="Price">
+            </td>
+            <td>
+                <input type="text" id="bookauthor" placeholder="Author">
+            </td>
+            <td>
+                <input type="button" id="btnsearch" value="search">
+            </td>
+        </tr>
+    </table>
+    <div id="shop"></div>
+    <script>
+        let books = [
+            {'name':'One','price':100,'author':'ABC'},
+            {'name':'Two','price':200,'author':'XYZ'},
+            {'name':'Three','price':300,'author':'ABC'},
+            {'name':'four','price':100,'author':'XYZ'},
+            {'name':'five','price':200,'author':'ABC'},
+            {'name':'six','price':300,'author':'XYZ'},
+            {'name':'seven','price':100,'author':'ABC'},
+            {'name':'eight','price':200,'author':'XYZ'},
+            {'name':'nine','price':300,'author':'ABC'},
+            {'name':'ten','price':100,'author':'XYZ'}
+        ]
+        function DisplayBook(BookList)
+        {
+            document.getElementById("shop").innerHTML ='';
+            BookList.forEach(function(book){
+                document.getElementById("shop").innerHTML+=`<div><p>${book.name}</p><p>${book.price}</p><p>${book.author}</p></div>`;
+            });
+        }
+
+        DisplayBook(books);
+
+        var btnsearch = document.getElementById('btnsearch');
+        var bookprice = document.getElementById('bookprice');
+        var bookauthor = document.getElementById('bookauthor');
+        btnsearch.addEventListener("click",function(){
+            var filtered_books = books.map(function(book){
+                var temp = null;
+                if(bookprice.value!='' && bookauthor.value!='')
+                {
+                    
+                    if(book.price == bookprice.value && book.author == bookauthor.value)
+                       temp = book;
+                }
+                else if(bookprice.value!='')
+                {
+                    if(book.price == bookprice.value)
+                        temp = book;
+                }
+                else if(bookauthor.value!='')
+                {
+                    if(book.author == bookauthor.value)
+                        temp = book;
+                }
+                return temp;
+            });
+            filtered_books = filtered_books.filter(function(book){return book}); 
+            DisplayBook(filtered_books);
+        });
+    </script>
+</body>
+</html>
