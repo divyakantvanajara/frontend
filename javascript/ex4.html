@@ -5,21 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #shop {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #shop>div {
+            width: 30%;
+            border: 1px solid black;
+            background-color: aliceblue;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Arrow functions</h1>
-    <p id="output" style="margin-left:50px;font-size:30px;"></p>
+    <h1>Array Map function</h1>
+    <p>use console to see output</p>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="bookprice" placeholder="price">
+            </td>
+            <td>
+                <input type="text" id="bookauthor" placeholder="Author">
+            </td>
+            <td>
+                <input type="button" id="btnsearch" value="search">
+            </td>
+        </tr>
+    </table>
+    <div id="shop"></div>
     <script>
-        let add =(num1,num2) =>num1 + num2;
-        let sub =(num1,num2) =>num1 - num2;
-        let mul =(num1,num2) =>num1 * num2;
-        let div =(num1,num2) =>num1 / num2;
-        let display=message =>document.getElementById("output").innerHTML +='<br/>' + message;
+      
+       let books= [
+       {'name':'one','price':100,'author':'abc'},
+       {'name':'two','price':200,'author':'xyz'},
+       {'name':'three','price':300,'author':'abc'},
+       {'name':'four','price':100,'author':'xyz'},
+       {'name':'five','price':200,'author':'abc'},
+       {'name':'six','price':300,'author':'abc'},
+       {'name':'seven','price':300,'author':'xyz'},
+       {'name':'eight','price':100,'author':'abc'}
+       ]
+     
+       function DisplayBook(BookList) {
+            document.getElementById("shop").innerHTML = '';
+            
+            BookList.forEach(function (book) {
+                document.getElementById("shop").innerHTML += `<div><p>${book.name}</p><p>${book.price}</p><p>${book.author}</p></div>`;
+            });
+        }
+        DisplayBook(books);
 
-        display('addition = ' + add(10,3));
-        display('substraction = ' + sub(10,3));
-        display('multiplication = ' + mul(10,3));
-        display('divison = ' + div(10,3).toFixed(2));
+        var btnsearch=document.getElementById('btnsearch');
+        var bookprice = document.getElementById('bookprice');
+        var bookauthor = document.getElementById('bookauthor');
+        btnsearch.addEventListener("click" ,function()
+        {
+            var filtered_books=books.map(function(book)
+            {
+                var temp = null;
+                if (bookprice.value != '' && bookauthor.value != '') {
+
+                    if (book.price == bookprice.value && book.author == bookauthor.value)
+                        temp = book;
+                }
+                else if (bookprice.value != '') {
+                    if (book.price == bookprice.value)
+                        temp = book;
+                }
+                else if (bookauthor.value != '') {
+                    if (book.author == bookauthor.value)
+                        temp = book;
+                }
+                return temp;
+            });
+            filtered_books=filtered_books.filter(function(book)
+       {
+        return book;
+       });
+       DisplayBook(filtered_books);
+    });
+ 
+
+
+       
+      
     </script>
 </body>
 </html>
