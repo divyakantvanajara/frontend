@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ES6 Spread Operator</h1> <hr>
+    <p>use consloe to see output</p>
+    <script>
+        let person = {
+            name : "Ankit Patel",
+            age : 35,
+            weight : 75.22,
+            city: 'Bhavnagar'
+        };
+        let update_person = {
+            age : 37,
+            weight : 80.99,
+            email : 'ankit@gmail.com'
+        }
+        console.log("person object",person);
+        console.log("update_person object",update_person);
+
+        let updated_person = {...person,...update_person};
+        console.log("updated_person object",updated_person);
+    </script>
+</body>
+</html>

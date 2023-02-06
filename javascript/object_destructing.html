@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object destructuring</h1> <hr>
+    <p>use consloe to see output</p>
+    <script>
+        let course = {
+            name : "Javascript",
+            trainer : "Ankit Patel",
+            duration : 30,
+            city: 'Bhavnagar'
+        }
+        console.log(course);
+        //object destructuring
+        let {name: CourseName,trainer:TrainerName,duration:CourseDuration,city:Location} = course;
+        console.log("Course Name",CourseName);
+        console.log("Trainer Name",TrainerName);
+        console.log("Course Duration",CourseDuration);
+        console.log("Course Location",Location);
+        
+    </script>
+</body>
+</html>
