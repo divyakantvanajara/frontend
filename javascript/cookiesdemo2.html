@@ -28,6 +28,8 @@
                     <input type="button" value="Create Cookie" id="create" /> 
                     <input type="button" value="Get Cookie" id="get" /> 
                     <input type="button" value="Delete Cookie" id="delete" /> 
+                    <input type="button" value="open google" id="btnopen" /> 
+                    <input type="button" value="Print this page" id="btnprint" /> 
                 </td>
             </tr>
         </table>
@@ -37,6 +39,8 @@
         var create = document.getElementById("create");
         var get = document.getElementById("get");
         var btndelete = document.getElementById("delete");
+        var btnopen = document.getElementById("btnopen");
+        var btnprint = document.getElementById("btnprint");
         var CookieName = document.getElementById("CookieName");
         var CookieValue = document.getElementById("CookieValue");
 
@@ -51,6 +55,18 @@
             CookieValue.value = response;
         });
 
+        btndelete.addEventListener("click",function(){
+            setCookie(CookieName.value,'',-100);
+            CookieName.value = "";
+        });
+
+        btnopen.addEventListener("click",function(){
+            window.location="http://www.google.com";
+        });
+
+        btnprint.addEventListener("click",function(){
+           window.print();
+        });
     </script>
 </body>
 </html>

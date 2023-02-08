@@ -5,95 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #shop {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        #shop>div {
-            width: 30%;
-            border: 1px solid black;
-            background-color: aliceblue;
-            margin-bottom: 10px;
-            font-size: 2rem;
-        }
-    </style>
 </head>
 <body>
-    <h1>Array Map function</h1>
+    <h1>How to create duplicate object (Object Clone)</h1> <hr>
     <p>use console to see output</p>
-    <table>
-        <tr>
-            <td>
-                <input type="text" id="bookprice" placeholder="price">
-            </td>
-            <td>
-                <input type="text" id="bookauthor" placeholder="Author">
-            </td>
-            <td>
-                <input type="button" id="btnsearch" value="search">
-            </td>
-        </tr>
-    </table>
-    <div id="shop"></div>
     <script>
-      
-       let books= [
-       {'name':'one','price':100,'author':'abc'},
-       {'name':'two','price':200,'author':'xyz'},
-       {'name':'three','price':300,'author':'abc'},
-       {'name':'four','price':100,'author':'xyz'},
-       {'name':'five','price':200,'author':'abc'},
-       {'name':'six','price':300,'author':'abc'},
-       {'name':'seven','price':300,'author':'xyz'},
-       {'name':'eight','price':100,'author':'abc'}
-       ]
-     
-       function DisplayBook(BookList) {
-            document.getElementById("shop").innerHTML = '';
-            
-            BookList.forEach(function (book) {
-                document.getElementById("shop").innerHTML += `<div><p>${book.name}</p><p>${book.price}</p><p>${book.author}</p></div>`;
-            });
+        let person = {
+            name : "Ankit Patel",
+            age : 35,
+            weight : 75.22,
+            city: 'Bhavnagar'
+        };
+        let another_person = {}; //empty object
+        console.log("Person ",person);
+        console.log("Another Person ",another_person);
+
+        for (let property in person){
+            another_person[property]=person[property];
         }
-        DisplayBook(books);
-
-        var btnsearch=document.getElementById('btnsearch');
-        var bookprice = document.getElementById('bookprice');
-        var bookauthor = document.getElementById('bookauthor');
-        btnsearch.addEventListener("click" ,function()
-        {
-            var filtered_books=books.map(function(book)
-            {
-                var temp = null;
-                if (bookprice.value != '' && bookauthor.value != '') {
-
-                    if (book.price == bookprice.value && book.author == bookauthor.value)
-                        temp = book;
-                }
-                else if (bookprice.value != '') {
-                    if (book.price == bookprice.value)
-                        temp = book;
-                }
-                else if (bookauthor.value != '') {
-                    if (book.author == bookauthor.value)
-                        temp = book;
-                }
-                return temp;
-            });
-            filtered_books=filtered_books.filter(function(book)
-       {
-        return book;
-       });
-       DisplayBook(filtered_books);
-    });
- 
-
-
-       
-      
+        another_person.name = "Jiya Patel";
+        another_person.age = 10;
+        console.log('after cloning and updation')
+        console.log("Person ",person);
+        console.log("Another Person ",another_person);
     </script>
 </body>
 </html>
