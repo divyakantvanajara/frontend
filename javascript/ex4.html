@@ -7,27 +7,64 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>How to create duplicate object (Object Clone)</h1> <hr>
-    <p>use console to see output</p>
+    <h1>working with cookies</h1>
+    <hr>
+    <form action="">
+        <table align="center" cellpadding="10" width="50%" border="2">
+            <tr>
+                <td>Enter cookie name</td>
+                <td>
+                    <input type="text" id="CookieName" />
+                </td>
+            </tr>
+            <tr>
+                <td>Enter cookie value</td>
+                <td>
+                    <input type="text" id="CookieValue" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Create Cookie" id="create" /> 
+                    <input type="button" value="Get Cookie" id="get" /> 
+                    <input type="button" value="Delete Cookie" id="delete" /> 
+                    <input type="button" value="open google" id="btnopen" /> 
+                    <input type="button" value="Print this page" id="btnprint" /> 
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="cookies.js"></script>
     <script>
-        let person = {
-            name : "Ankit Patel",
-            age : 35,
-            weight : 75.22,
-            city: 'Bhavnagar'
-        };
-        let another_person = {}; //empty object
-        console.log("Person ",person);
-        console.log("Another Person ",another_person);
+         var create = document.getElementById("create");
+        var get = document.getElementById("get");
+        var btndelete = document.getElementById("delete");
+        var btnopen = document.getElementById("btnopen");
+        var btnprint = document.getElementById("btnprint");
+        var CookieName = document.getElementById("CookieName");
+        var CookieValue = document.getElementById("CookieValue");
 
-        for (let property in person){
-            another_person[property]=person[property];
-        }
-        another_person.name = "Jiya Patel";
-        another_person.age = 10;
-        console.log('after cloning and updation')
-        console.log("Person ",person);
-        console.log("Another Person ",another_person);
+        create.addEventListener("click",function()
+        {
+            setCookie(CookieName.value,CookieValue.value);
+            CookieName.value="";
+            CookieValue.value="";
+        });
+        get.addEventListener("click",function(){
+            var response = getCookie(CookieName.value);
+            CookieValue.value=response;
+        });
+        btndelete.addEventListener("click",function(){
+            setCookie(CookieName.value,"",-100);
+            CookieName.value="";
+        });
+        btnopen.addEventListener("click",function(){
+            window.location="http://www.google.com";
+            
+        });
+        btnprint.addEventListener("click",function(){
+           window.print();
+        });
     </script>
 </body>
 </html>
