@@ -1,0 +1,4 @@
+1) develop resume using only html tags as per structure given Web-Developer_resume.jpg file 
+
+2) create change password form 
+2) create forgot password form 

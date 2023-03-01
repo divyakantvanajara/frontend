@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="success.html" method="post" enctype="multipart/form-data">
+        <table border="2" align="center" width="50%" cellpadding="10">
+            
+            <tr>
+                <td>
+                    <input type="text" name="fullname" placeholder="Enter fullname" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b> Birth Date</b> <br>
+                    <input type="date" name="dob" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="city" placeholder="City" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="number" placeholder="Pincode" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="mobile" placeholder="Mobile" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="email" name="email" placeholder="your email address" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Select gender</b> <br>
+                    <label for="male">
+                        <input id="male" type="radio" name="rdogender" value="1" required>Male
+                    </label>
+                    <br>
+                    <label for="female">
+                        <input id="female" type="radio" name="rdogender" value="0" required>Female 
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Language you can speak, read & write</b> <br>
+                    <label for="gujarati"><input type="checkbox" name="gujarati" id="gujarati" value="1">gujarati</label> <br>
+                    <label for="hindi"><input type="checkbox" name="hindi" id="hindi" value="2">hindi</label> <br>
+                    <label for="english"><input type="checkbox" name="english" id="english" value="4">english</label> <br>
+                    <label for="marathi"><input type="checkbox" name="marathi" id="marathi" value="8">marathi</label> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="country" required>
+                        <option value="">Select country</option>
+                        <option value="1">India</option>
+                        <option value="2">Russia</option>
+                        <option value="3">US</option>
+                        <option value="4">Brazil</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="hobbies" multiple size="3">
+                        <option value="">Select your hobbies</option>
+                        <option value="1">Reading</option>
+                        <option value="2">Coding</option>
+                        <option value="3">Teaching</option>
+                        <option value="4">Sleeping</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>select photo</b>
+                    <br>
+                    <input type="file" name="photo" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>address</b> <br>
+                    <textarea name="address" cols="50" rows="10">
+
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="register" name="register">
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="secret" value="i am human" >
+    </form>
+</body>
+</html>
